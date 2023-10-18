@@ -1,0 +1,614 @@
+:root{
+    --colorLetra: rgb(252, 162, 28);
+    --colorElems: rgb( 0, 0, 0);
+    --colorTexto: rgb(255, 255, 255);
+
+    --colorH3Presenaciones: rgb(192, 53, 29);
+    --colorFondoPresentaciones: rgb(255, 255,255);
+    --colorFondoPresentaciones1: #008170;
+    --colorFondoPresentaciones2: #000000;
+
+    --colorSecciones: rgb(255, 255,255);
+
+    --colorSUBTITULOS: rgb(187, 70, 70);
+}
+
+/*G E N E R I C O ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg*/
+
+
+*
+{
+    font-family: 'Antonio', sans-serif;
+}
+
+body{
+    background-color: #FFFFFF;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, a{
+    text-align: center;
+    margin: 0;
+}
+
+h1{
+   
+}
+
+h2{
+    color: #4b0404;
+}
+
+h3{
+    color: #e76f6f;
+}
+
+p{
+    color: #000000;
+    
+}
+
+a{
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    /* font-size: 2rem; */
+}
+/*ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg*/
+
+.fixed-position{
+    position: fixed;
+}
+
+.relative-position{
+    position: relative;
+}
+
+.absolute-position{
+    position: absolute;
+}
+
+.flex-box{
+    display: flex;
+}
+
+.box-border{
+    border: 2px solid #FFD700;
+}
+
+.cabezera{
+    width: 100%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: var(--colorElems);
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: center;
+    top:0;
+    z-index: 1000;
+}
+
+
+.cabezera > .flex-item{
+    flex: 1;
+    height: 100%;
+}
+
+.cabezera__containerH1-IMG{
+    align-items: center;
+}
+
+/* FLEX ITEMS DE CABEZERA__CONTAINERH1-IMG--------*/
+.cabezera__containerH1-IMG h1{
+    margin: 0;
+    font-size: 7vh;
+    color: var(--colorLetra);
+    letter-spacing: 1vw;
+    padding: 1%;
+}
+
+.cabezera__containerH1-IMG img{
+    max-width: 10vh;
+    min-width: 10vh;
+}
+/*------------------------------------------------*/
+/*FLEX-ITEMS DE NAVEGADOR ++++++++++++++++++++++++++++++*/
+.nav__ul{
+    justify-content: space-around;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+}
+
+.nav__menu-item{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.cabezera__navegador-link{
+    text-decoration: none;
+    font-size: 95%;
+    color: #FFFFFF;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* CUERPO -------------------------------------*/
+/*inicio*/
+.inicio {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(img/Fondos/fondoInicio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.presentacion-box{
+    width: fit-content;
+    height: fit-content;
+    padding: 5%;
+}
+
+.presentacion-box {
+    background-image: url('imagen_de_fondo.jpg'); /* Reemplaza 'imagen_de_fondo.jpg' con la URL de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    background-color: #000000;
+    opacity: 0.7;
+}
+
+.presentacion-box h1 {
+    font-size: 70px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+.presentacion-box p {
+    font-size: 25px;
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .inicio{
+        height: 60vh;
+    }
+    .presentacion-box {
+        padding: 50px;
+    }
+    .presentacion-box h1 {
+        font-size: 24px;
+    }
+    .presentacion-box p {
+        font-size: 16px;
+    }
+}
+
+/*Mensaje presentacion*/
+.presentacion__mensaje, .recetas__enlace{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 50%;
+    height: 50vh;
+
+    margin: 70px auto;
+    padding: 5px;
+}
+
+.presentacion__mensaje p{
+    width: 70%;
+    height: fit-content;
+}
+
+/* galeria */
+.containerGaleria{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeria{
+    width: 90%;
+    height: 80%;
+}
+
+.galeria div{
+    box-shadow: 10px 10px 50px 0px rgb(0 ,0 , 0 , 0.3);
+}
+
+.galeria img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.galeria div:first-child{
+    z-index: 1;
+    width: 65%;
+    height: 80%;
+    top: 0;
+    right: 0;
+}
+
+.galeria div:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 60%;
+    height: 70%;
+}
+
+.galeria div:nth-child(3){
+    z-index: 10;
+    width: 50%;
+    height: 60%;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+
+
+/*Quienes somos?*/
+.quienesSomos{
+    background-image: url(img/Fondos/quienesSomos.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    width: 100%;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.mensajesContainer{
+    width: 80%;
+    height: 80%;
+    /* background-color: #008170; */
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    align-content: center;
+}
+
+.mensaje, .mision, .vision{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.mensaje{
+    width: 100%;
+    height: 50%;
+    /* background-color: #008170; */
+}
+
+.mision{
+    width: 45%;
+    min-width: 350px;
+
+    height: 50%;
+
+    background-color: #000000;
+    opacity: 0.8;
+}
+
+.vision{
+    width: 45%;
+    min-width: 350px;
+    height: 50%;
+
+    background-color: #000000;
+    opacity: 0.8;
+}
+
+.mision h3, .vision h3, .valores h3, .politicasCalidad h3{
+    font-size: 30px;
+}
+
+.mensaje h2, .mensaje h3, 
+.mision h3, .mision p,
+.vision h3, .vision p,
+.valores h3, .valores ul,
+.politicasCalidad h3, .politicasCalidad p, .listaValores li
+{
+    color: #FFFFFF;
+    text-shadow: 3px 3px #000000;
+}
+
+/*Logros*/
+.logros{
+    width: 100%;
+    height: 70vh;
+}
+
+/*seccion Moral*/
+.seccionMoral{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/Fondos/fondoMoral.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.cont_msMoralidad{
+    width: 90%;
+    height: 80%;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.valores, .politicasCalidad{
+    width: 560px;
+    min-width: 400px;
+    height: 80vh;
+    background-color: #000000;
+    opacity: 0.8;
+    color:#FFFFFF;
+    flex-direction: column;   
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tituloValores{
+    flex-basis: content;
+}
+
+.listaValores{
+    height: 60vh;
+    
+    flex-direction: column;   
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.listaValores li{
+    font-size: 20px;
+}
+
+.politicasCalidad, .valores{
+    padding: 20px;
+}
+
+/*Footer fffffffffffffffffffffffffffffffffffffffffffffffffff*/
+.pie{
+    border-top: 2px solid #FFD700;;
+    width: 100%;
+    height: 40vh;
+    background-color: #000000;
+    color: #000000;
+    position: relative;
+    z-index: 1000000;
+}
+
+.pie__FinContainer{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.IMGCONT{
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.PCONT{
+    width: 40%;
+    height: 100%;
+    margin-left: 5px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.PCONT p, a{
+    color: wheat;
+    font-size: 1rem;
+}
+/*fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff*/
+/*------------------------------*/
+
+
+@media screen and (max-width: 1240px){
+    .cont_msMoralidad{
+        width: 90%;
+        justify-content: center;
+        align-content: space-around;
+    }
+
+    .valores{
+        width: 100%;
+        height: 47.5%;
+    }
+
+    .politicasCalidad{
+        width: 100%;
+        height: 47.5%;
+    }
+
+    .pie{
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .PCONT {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .pie__FinContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgCONT{
+        height: 30%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 920px){
+    .cabezera__containerH1-IMG{
+        justify-content: center;
+    }
+
+    .presentacion__mensaje, .recetas__enlace{
+        width: 80%;
+    }
+
+    .containerGaleria{
+        height: 80vh;
+    }
+
+    .quienesSomos h2{
+        font-size: 50px;
+    }
+
+
+    .PCONT p, a{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 874px){
+    .mensajesContainer{
+        height: 95%;
+        align-content: space-between;
+        justify-content: center;
+    }
+    .mensaje{
+        max-width: 100%;
+        min-width: 270px;
+        height: 32%;
+    }
+
+    .mision{
+        max-width: 100%;
+        min-width: 270px;
+        height: 32%;
+    
+        background-color: #000000;
+        opacity: 0.8;
+    }
+    
+    .vision{
+        max-width: 100%;
+        min-width: 270px;
+        height: 32%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .PCONT p, a{
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 550px){
+    .cont_msMoralidad{
+        height: 95%;
+    }
+
+    .presentacion__mensaje{
+        width: 80%;
+        height: 60vh;
+    } 
+
+    .containerGaleria{
+        height: 60vh;
+    }
+} 
+
+@media screen and (max-width: 430px){
+    h1{
+        font-size: 25px;
+    }
+
+    h2{
+        font-size: 22px;   
+    }
+
+    p{
+        font-size: 18px;
+    }
+
+    .quienesSomos p{
+        font-size: 12px;
+    }
+
+    .cont_msMoralidad p, .cont_msMoralidad li{
+        font-size: 12px;
+    }
+
+    .cont_msMoralidad h3{
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 400px){
+    .presentacion__mensaje{
+        width: 80%;
+        height: fit-content;
+        padding: 5px;
+    } 
+
+    .containerGaleria{
+        height: 60vh;
+    }
+
+    .cont_msMoralidad{
+        height: 100%;
+    }
+
+    .valores, .politicasCalidad{
+        min-width: 250px;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 330px){
+    h1{
+        font-size: 5px;
+    }
+
+    h2{
+        font-size: 5px;   
+    }
+
+    p{
+        font-size: 5px;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="estiloContacto.css">
+    <title>Contacto Imillitay</title>
+</head>
+<body>
+    <header class="cabezera flex-box">
+        <div class="cabezera__containerH1-IMG flex-item flex-box">
+            <h1 class="flex-item flex-box">IMILLITAY</h1>
+            <img src="../img/logoImillitay (1).png" alt="logo Imillitay" class="cabezera__IMGlogo flex-item">
+        </div>
+        <nav class="navegador flex-item">
+            <ul class="nav__ul flex-box">
+                <li class="nav__menu-item flex-item"><a href="../index.html" class="cabezera__navegador-link">Inicio</a></li>
+                <!-- <li class="nav__menu-item flex-item"><a href="" class="cabezera__navegador-link">Carta</a></li> -->
+                <li class="nav__menu-item flex-item"><a href="../Nosotros/nosotros.html"class="cabezera__navegador-link">Nosotros</a></li>
+                <!-- <li class="nav__menu-item flex-item"><a href="" class="cabezera__navegador-link">Contacto</a></li> -->
+            </ul>
+    </header>
+    <main>
+        <section class="bienvenidaContainer flex-box">
+            <div class="container">
+                <h2>Formulario de Contacto</h2>
+                <form>
+                    <label for="nombre_apellido">Nombre y Apellido *</label>
+                    <input type="text" id="nombre_apellido" name="nombre_apellido" required>
+                    
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                    
+                    <label for="correo">Correo electrónico *</label>
+                    <input type="email" id="correo" name="correo" required>
+                    
+                    <label for="como_se_entero">¿Cómo se enteró de nuestro Restaurante?</label>
+                    <select id="como_se_entero" name="como_se_entero">
+                        <option value="busqueda">Búsqueda en Internet</option>
+                        <option value="redes_sociales">Redes Sociales</option>
+                        <option value="referidos">Referidos</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                    
+                    <label for="mensaje">Mensaje (introduzca su mensaje) *</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                    
+                    <input type="submit" class="btn" value="Enviar">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="pie">
+        <div class="pie__FinContainer flex-box">
+            <div class="flex-item imgCONT flex-box">
+                <img src="../img/pieLogo.png" alt="">
+            </div>
+            <div class="flex-item PCONT flex-box">
+                <p class="flex-item">SERVICIO A DOMICILIO</p>
+                <p class="flex-item">Menú Express y Uber Eats</p>
+                <p class="flex-item">Teléfono: (+593) 2256-739</p>
+                <p class="flex-item">Email: <a href="mailto:rs@ImillitayParrillaBoliviana.com">rs@ImillitayParrillaBoliviana.com</a></p>
+                <p class="flex-item">&copy; 2020 IMILLITAY PARRILLA BOLIVIANA</p>
+                <p class="flex-item">DESARROLLADO POR: FABIO ANDRE MOJICA ARMAZA</p>
+                <p class="flex-item">PÁGINAS WEB CBBA-BOLIVIA</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
